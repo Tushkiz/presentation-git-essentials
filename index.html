@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>git essentials</title>
+    <link href="http://fonts.googleapis.com/css?family=open+sans:300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>git essentials</h1>
+        <h3><a href="https://twitter.com/tushkiz">@tushkiz</a></h3><img src="images/profile.jpg" class="avatar avatar--small">
+      </section>
+      <section>
+        <h1 class="bullet">git</h1>
+        <h3 class="bullet">- open source</h3>
+        <h3 class="bullet">- distributed (decentralized)</h3>
+        <h3 class="bullet">- version control</h3>
+      </section>
+      <section class="img img--version-control"></section>
+      <section>
+        <h2 class="bullet">distributed (decentralized)...</h2>
+      </section>
+      <section class="img img--centr-decentr"></section>
+      <section>
+        <h2 class="bullet">(almost) everything is local</h2>
+      </section>
+      <section>
+        <h2 class="bullet">super fast operations,</h2>
+        <h2 class="bullet">every clone is backup</h2>
+        <h2 class="bullet">and you can work offline</h2>
+      </section>
+      <section>
+        <h2 class="bullet">no netwok needed...</h2>
+        <h3 class="bullet">- performing a diff</h3>
+        <h3 class="bullet">- viewing file history</h3>
+        <h3 class="bullet">- committing changes</h3>
+        <h3 class="bullet">- merging/switch branches</h3>
+        <h3 class="bullet">- time travel to a revision of a file</h3>
+      </section>
+      <section class="gif gif--future">
+        <h1>time travel</h1>
+      </section>
+      <section>
+        <h2>how do i use git?</h2>
+      </section>
+      <section>
+        <h2><a href="http://git-scm.com" target="_blank">git-scm.com</a></h2>
+      </section>
+      <section>
+        <h2>setup & config</h2>
+        <pre class="language-bash"><code>$ git config --global user.name "tushar sonawane"</code></pre>
+        <pre class="language-bash"><code>$ git config --global user.email "tusharlsonawane@gmail.com"
+</code></pre>
+      </section>
+      <section class="img img--unknown-commit"></section>
+      <section class="gif gif--grunt-happy">
+        <h1>showtime</h1>
+      </section>
+      <section>
+        <h2>initializing</h2>
+        <pre class="language-bash"><code>$ git init
+</code></pre>
+      </section>
+      <section>
+        <h2>reviewing changes</h2>
+        <pre class="language-bash"><code>$ git status</code></pre>
+        <pre class="language-bash"><code>$ git diff
+</code></pre>
+      </section>
+      <section>
+        <h2>adding and commiting</h2>
+        <pre class="language-bash"><code>$ git add <filename>
+</code></pre>
+        <pre class="language-bash"><code>$ git commit -m 'this is my commit msg'
+</code></pre>
+      </section>
+      <section class="gif gif--well-done">
+        <h1>well done</h1>
+      </section>
+      <section>
+        <h2>but...</h2>
+        <h3>how do i submit the changes?</h3>
+      </section>
+      <section>
+        <h2>adding remote</h2>
+        <pre class="language-bash"><code>$ git remote add origin git@github.com:[username]/[repo-name].git
+</code></pre>
+      </section>
+      <section>
+        <h2>submitting changes</h2>
+        <pre class="language-bash"><code>$ git push origin master
+</code></pre>
+      </section>
+      <section>
+        <h2>cloning</h2>
+        <pre class="language-bash"><code>$ git clone git@github.com:[username]/[repo-name].git
+</code></pre>
+      </section>
+      <section>
+        <h2>getting changes from remote</h2>
+        <pre class="language-bash"><code>$ git pull
+</code></pre>
+      </section>
+      <section>
+        <h2>getting changes from remote like a boss</h2>
+        <pre class="language-bash"><code>$ git pull --rebase
+</code></pre>
+      </section>
+      <section>
+        <h2>history</h2>
+        <pre class="language-bash"><code>$ git log</code></pre>
+        <pre class="language-bash"><code>$ git log --stat
+</code></pre>
+      </section>
+      <section>
+        <h2 class="bullet">basic workflow</h2>
+        <h3 class="bullet">- make changes</h3>
+        <h3 class="bullet">- stage the changes (git add)</h3>
+        <h3 class="bullet">- review the changes (git status, git diff)</h3>
+        <h3 class="bullet">- commit the changes (git commit)</h3>
+        <h3 class="bullet">- get/submit the changes (git pull, git push)</h3>
+      </section>
+      <section class="gif gif--omg-git">
+        <h1>advanced git</h1>
+      </section>
+      <section>
+        <h2>branching out</h2>
+        <pre class="language-bash"><code>$ git branch clean-up</code></pre>
+        <h2>switching branches</h2>
+        <pre class="language-bash"><code>$ git checkout clean-up
+</code></pre>
+      </section>
+      <section>
+        <h2>switching back to master</h2>
+        <pre class="language-bash"><code>$ git checkout master</code></pre>
+        <h2>merging changes</h2>
+        <pre class="language-bash"><code>$ git merge clean-up
+</code></pre>
+      </section>
+      <section class="gif gif--hulk-smashes-thor">
+        <h1>deleting branch</h1>
+      </section>
+      <section>
+        <pre class="language-bash"><code>$ git branch -d clean_up
+</code></pre>
+      </section>
+      <section>
+        <h2>cherry picking</h2>
+        <pre class="language-javascript"><code>sha1 = c97c21a3242b5efd4e970e55f79e5e90545d67b8</code></pre>
+        <pre class="language-bash"><code>git cherry-pick c97c21a3242
+</code></pre>
+      </section>
+      <section>
+        <h2>any doubts?</h2>
+      </section>
+      <section data-bespoke-state="green" class="light"><br><br><br><br>
+        <h1>thank you!</h1><br><br><br><br><br><br><br><br>
+        <h6>no animals were harmed in the making of this presentation</h6>
+      </section>
+      <section>
+        <h2>Further Reading
+          <h4><a href="http://pcottle.github.io/learnGitBranching/">Git Branching</a></h4>
+          <h4><a href="https://www.andyjeffries.co.uk/25-tips-for-intermediate-git-users/">25 Tips for intermediate git users</a></h4>
+          <h4><a href="http://41j.com/blog/2015/02/common-git-screwupsquestions-solutions/">Common git screwup solutions</a></h4>
+          <h4><a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">How to undo almost anything with git</a></h4>
+        </h2>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
