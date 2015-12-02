@@ -1,0 +1,233 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title git essentials
+
+    link(href='http://fonts.googleapis.com/css?family=open+sans:300,600', rel='stylesheet', type='text/css')
+
+    // build:css styles/styles.css
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-twilight.css')
+    link(rel='stylesheet', type='text/css', href='styles/main.css')
+    // endbuild
+
+  body
+
+    article
+
+      section
+        h1 git essentials
+        h3
+          a(href='https://twitter.com/tushkiz') @tushkiz
+        img.avatar.avatar--small(src='images/profile.jpg')
+
+      section
+        h1.bullet git
+        h3.bullet - open source
+        h3.bullet - distributed (decentralized)
+        h3.bullet - version control
+
+      section.img.img--version-control
+
+      section
+        h2.bullet distributed (decentralized)...
+
+      section.img.img--centr-decentr
+
+      section
+        h2.bullet (almost) everything is local
+
+      section
+        h2.bullet super fast operations,
+        h2.bullet every clone is backup
+        h2.bullet and you can work offline
+
+      section
+        h2.bullet no netwok needed...
+        h3.bullet - performing a diff
+        h3.bullet - viewing file history
+        h3.bullet - committing changes
+        h3.bullet - merging/switch branches
+        h3.bullet - time travel to a revision of a file
+
+      section.gif.gif--future
+        h1 time travel
+
+      section
+        h2 how do i use git?
+
+      section
+        h2 <a href="http://git-scm.com" target="_blank">git-scm.com</a>
+
+      section
+        h2 setup & config
+        pre.language-bash
+          code.
+            $ git config --global user.name "tushar sonawane"
+        pre.language-bash
+          code.
+            $ git config --global user.email "tusharlsonawane@gmail.com"
+
+      section.img.img--unknown-commit
+
+      section.gif.gif--grunt-happy
+        h1 showtime
+
+      section
+        h2 initializing
+        pre.language-bash
+            code.
+              $ git init
+
+      section
+        h2 reviewing changes
+        pre.language-bash
+            code.
+              $ git status
+        pre.language-bash
+            code.
+              $ git diff
+
+      section
+        h2 adding and commiting
+        pre.language-bash
+            code.
+              $ git add <filename>
+
+        pre.language-bash
+          code.
+            $ git commit -m 'this is my commit msg'
+
+      section.gif.gif--well-done
+        h1 well done
+
+      section
+        h2 but...
+        h3 how do i submit the changes?
+
+      section
+        h2 adding remote
+        pre.language-bash
+          code.
+            $ git remote add origin git@github.com:[username]/[repo-name].git
+
+      section
+        h2 submitting changes
+        pre.language-bash
+          code.
+            $ git push origin master
+
+      section
+        h2 cloning
+        pre.language-bash
+          code.
+            $ git clone git@github.com:[username]/[repo-name].git
+
+      section
+        h2 getting changes from remote
+        pre.language-bash
+          code.
+            $ git pull
+
+      section
+        h2 getting changes from remote like a boss
+        pre.language-bash
+          code.
+            $ git pull --rebase
+
+      section
+        h2 history
+        pre.language-bash
+          code.
+            $ git log
+        pre.language-bash
+          code.
+            $ git log --stat
+
+      section
+        h2.bullet basic workflow
+        h3.bullet - make changes
+        h3.bullet - stage the changes (git add)
+        h3.bullet - review the changes (git status, git diff)
+        h3.bullet - commit the changes (git commit)
+        h3.bullet - get/submit the changes (git pull, git push)
+
+      section.gif.gif--omg-git
+        h1 advanced git
+
+      section
+        h2 branching out
+        pre.language-bash
+          code.
+            $ git branch clean-up
+        h2 switching branches
+        pre.language-bash
+          code.
+            $ git checkout clean-up
+
+      section
+        h2 switching back to master
+        pre.language-bash
+          code.
+            $ git checkout master
+        h2 merging changes
+        pre.language-bash
+          code.
+            $ git merge clean-up
+
+      section.gif.gif--hulk-smashes-thor
+        h1 deleting branch
+
+      section
+        pre.language-bash
+          code.
+            $ git branch -d clean_up
+
+      section
+        h2 cherry picking
+        pre.language-javascript
+          code.
+            sha1 = c97c21a3242b5efd4e970e55f79e5e90545d67b8
+        pre.language-bash
+          code.
+            git cherry-pick c97c21a3242
+
+      section
+        h2 any doubts?
+
+      section.light(data-bespoke-state='green')
+        br
+        br
+        br
+        br
+        h1 thank you!
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        h6 no animals were harmed in the making of this presentation
+
+      section
+        h2 Further Reading
+          h4 <a href="http://pcottle.github.io/learnGitBranching/">Git Branching</a>
+          h4 <a href="https://www.andyjeffries.co.uk/25-tips-for-intermediate-git-users/">25 Tips for intermediate git users</a>
+          h4 <a href="http://41j.com/blog/2015/02/common-git-screwupsquestions-solutions/">Common git screwup solutions</a>
+          h4 <a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">How to undo almost anything with git</a>
+
+    // build:js scripts/scripts.js
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-keys/dist/bespoke-keys.min.js')
+    script(src='bower_components/bespoke-touch/dist/bespoke-touch.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-scale/dist/bespoke-scale.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-progress/dist/bespoke-progress.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
+    // endbuild
